@@ -15,7 +15,6 @@ export class ChatGateway {
   @SubscribeMessage('message')
   // destructuramos con messsageBoy
   handleMessage(@MessageBody() message: string): void {
-    console.log(message);
     //Volvemos a emitir el mensaje
     this.server.emit('message', message);
   }
